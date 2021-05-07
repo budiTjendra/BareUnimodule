@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,10 +13,12 @@
 		17A54D762645149E00EBB42C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A54D742645149E00EBB42C /* Main.storyboard */; };
 		17A54D78264514A100EBB42C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A54D77264514A100EBB42C /* Assets.xcassets */; };
 		17A54D7B264514A100EBB42C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A54D79264514A100EBB42C /* LaunchScreen.storyboard */; };
-		7B28E6E66CAECAB37F9ECF55 /* Pods_awesomeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E562BBAD39205427609D1C /* Pods_awesomeApp.framework */; };
+		17A54E212645292600EBB42C /* AppBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A54E202645292600EBB42C /* AppBridge.m */; };
+		23E1FBA61523EBA9A4382FB6 /* Pods_awesomeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90704A88D90E848C159F41 /* Pods_awesomeApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1648B9CE675E81A24EE696BF /* Pods-awesomeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awesomeApp.release.xcconfig"; path = "Target Support Files/Pods-awesomeApp/Pods-awesomeApp.release.xcconfig"; sourceTree = "<group>"; };
 		17A54D6B2645149E00EBB42C /* awesomeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awesomeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A54D6E2645149E00EBB42C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A54D702645149E00EBB42C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,9 +27,10 @@
 		17A54D77264514A100EBB42C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17A54D7A264514A100EBB42C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17A54D7C264514A100EBB42C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B5A7B5FA8CDE6BFD51C955D /* Pods-awesomeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awesomeApp.release.xcconfig"; path = "Target Support Files/Pods-awesomeApp/Pods-awesomeApp.release.xcconfig"; sourceTree = "<group>"; };
-		29E562BBAD39205427609D1C /* Pods_awesomeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_awesomeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D9FC8312369C3C4AAA7509C /* Pods-awesomeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awesomeApp.debug.xcconfig"; path = "Target Support Files/Pods-awesomeApp/Pods-awesomeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		17A54E1F2645292500EBB42C /* awesomeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "awesomeApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		17A54E202645292600EBB42C /* AppBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppBridge.m; sourceTree = "<group>"; };
+		69EDA584A181BF0E6B77621C /* Pods-awesomeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-awesomeApp.debug.xcconfig"; path = "Target Support Files/Pods-awesomeApp/Pods-awesomeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EC90704A88D90E848C159F41 /* Pods_awesomeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_awesomeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,20 +38,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B28E6E66CAECAB37F9ECF55 /* Pods_awesomeApp.framework in Frameworks */,
+				23E1FBA61523EBA9A4382FB6 /* Pods_awesomeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04D888602C08A93234B0DA1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC90704A88D90E848C159F41 /* Pods_awesomeApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		17A54D622645149E00EBB42C = {
 			isa = PBXGroup;
 			children = (
 				17A54D6D2645149E00EBB42C /* awesomeApp */,
 				17A54D6C2645149E00EBB42C /* Products */,
 				EFD63A4D7757194D8EEE33C8 /* Pods */,
-				7DC3B8FAF5C9DD4DF115AA4D /* Frameworks */,
+				04D888602C08A93234B0DA1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,25 +81,18 @@
 				17A54D77264514A100EBB42C /* Assets.xcassets */,
 				17A54D79264514A100EBB42C /* LaunchScreen.storyboard */,
 				17A54D7C264514A100EBB42C /* Info.plist */,
+				17A54E202645292600EBB42C /* AppBridge.m */,
+				17A54E1F2645292500EBB42C /* awesomeApp-Bridging-Header.h */,
 			);
 			path = awesomeApp;
-			sourceTree = "<group>";
-		};
-		7DC3B8FAF5C9DD4DF115AA4D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				29E562BBAD39205427609D1C /* Pods_awesomeApp.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EFD63A4D7757194D8EEE33C8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3D9FC8312369C3C4AAA7509C /* Pods-awesomeApp.debug.xcconfig */,
-				1B5A7B5FA8CDE6BFD51C955D /* Pods-awesomeApp.release.xcconfig */,
+				69EDA584A181BF0E6B77621C /* Pods-awesomeApp.debug.xcconfig */,
+				1648B9CE675E81A24EE696BF /* Pods-awesomeApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -99,11 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17A54D7F264514A100EBB42C /* Build configuration list for PBXNativeTarget "awesomeApp" */;
 			buildPhases = (
-				0A12AAC71E4EBCCF7B5EC612 /* [CP] Check Pods Manifest.lock */,
+				D42B8D628601D18A68A9E94D /* [CP] Check Pods Manifest.lock */,
 				17A54D672645149E00EBB42C /* Sources */,
 				17A54D682645149E00EBB42C /* Frameworks */,
 				17A54D692645149E00EBB42C /* Resources */,
-				49BE98D685E598CF6A19A889 /* [CP] Embed Pods Frameworks */,
+				B46044B0D96C2AA3B74BB567 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +129,7 @@
 				TargetAttributes = {
 					17A54D6A2645149E00EBB42C = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -160,7 +165,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A12AAC71E4EBCCF7B5EC612 /* [CP] Check Pods Manifest.lock */ = {
+		B46044B0D96C2AA3B74BB567 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-awesomeApp/Pods-awesomeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-awesomeApp/Pods-awesomeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-awesomeApp/Pods-awesomeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D42B8D628601D18A68A9E94D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,23 +204,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		49BE98D685E598CF6A19A889 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-awesomeApp/Pods-awesomeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-awesomeApp/Pods-awesomeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-awesomeApp/Pods-awesomeApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -206,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A54E212645292600EBB42C /* AppBridge.m in Sources */,
 				17A54D732645149E00EBB42C /* ViewController.swift in Sources */,
 				17A54D6F2645149E00EBB42C /* AppDelegate.swift in Sources */,
 				17A54D712645149E00EBB42C /* SceneDelegate.swift in Sources */,
@@ -352,10 +358,11 @@
 		};
 		17A54D80264514A100EBB42C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D9FC8312369C3C4AAA7509C /* Pods-awesomeApp.debug.xcconfig */;
+			baseConfigurationReference = 69EDA584A181BF0E6B77621C /* Pods-awesomeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DD67N9K6P3;
 				INFOPLIST_FILE = awesomeApp/Info.plist;
@@ -365,6 +372,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = budi.awesomeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "awesomeApp/awesomeApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -372,10 +381,11 @@
 		};
 		17A54D81264514A100EBB42C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B5A7B5FA8CDE6BFD51C955D /* Pods-awesomeApp.release.xcconfig */;
+			baseConfigurationReference = 1648B9CE675E81A24EE696BF /* Pods-awesomeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DD67N9K6P3;
 				INFOPLIST_FILE = awesomeApp/Info.plist;
@@ -385,6 +395,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = budi.awesomeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "awesomeApp/awesomeApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
