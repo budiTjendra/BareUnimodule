@@ -3,6 +3,25 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '11.0'
 
+
+use_frameworks!
+
+# Convert all permission pods into static libraries
+pre_install do |installer|
+  installer.pod_targets.each do |pod|
+    if pod.name.eql?('RNPermissions') || pod.name.start_with?('Permission-')
+      def pod.build_type;
+         if Gem::Version.new(Pod::VERSION) >= Gem::Version.new('1.9.0')
+            Pod::BuildType.static_library # >= 1.9
+         else
+            Pod::Target::BuildType.static_library # < 1.9
+         end
+      end
+    end
+  end
+end
+
+
 target 'awesomeApp' do
   config = use_native_modules!
 
