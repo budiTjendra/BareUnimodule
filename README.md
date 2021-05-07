@@ -1,5 +1,8 @@
 # BareUnimodule
 
+Objective: 
+
+To produce issue reported in https://github.com/expo/expo/issues/12840
 
 To start project 
 
