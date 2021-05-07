@@ -1,10 +1,12 @@
 # BareUnimodule
 
-Objective: 
+### Objective: 
 
 To produce issue reported in https://github.com/expo/expo/issues/12840
 
-To start project 
+
+
+### To start project 
 
 1. Open terminal to root project folder and execute 'npm run cleanState'
 
